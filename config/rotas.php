@@ -12,5 +12,4 @@ return [
     '/nova-formacao' => \Alura\Armazenamento\Controller\FormularioInsercaoFormacao::class,
     '/salvar-formacao' => \Alura\Armazenamento\Controller\PersistenciaFormacao::class,
     '/listar-formacoes' => \Alura\Armazenamento\Controller\ListaDeFormacoes::class,
-    '/excluir-formacao' => \Alura\Armazenamento\Controller\ExclusaoDeFormacao::class,
 ];
