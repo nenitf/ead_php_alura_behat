@@ -33,6 +33,24 @@ E no terminal executava a cada zip novo de cada aula:
 vim README.md -c "call NN_GitAula2()" -c qa!
 ```
 
+## Anotações
+
+- [Contextos](https://docs.behat.org/en/latest/user_guide/context.html#context-class-requirements)
+- [Organização](https://docs.behat.org/en/latest/user_guide/organizing.html)
+- Comandos:
+
+```sh
+php vendor/bin/behat --init
+
+# geração de código
+php vendor/bin/behat --dry-run --append-snippets
+php vendor/bin/behat --dry-run --append-snippets --snippets-for=formacaoEmMemoria # contexto específico
+
+# execução
+php vendor/bin/behat
+php vendor/bin/behat -s unidade # tag unidade em caso de multiplos contextos
+```
+
 ## Ambiente necessário
 
 Para executar este sistema é necessário ter instalado:
