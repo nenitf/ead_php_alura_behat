@@ -49,6 +49,11 @@ php vendor/bin/behat --dry-run --append-snippets --snippets-for=formacaoEmMemori
 # execução
 php vendor/bin/behat
 php vendor/bin/behat -s unidade # tag unidade em caso de multiplos contextos
+
+# ver passos existentes (de libs tb)
+php vendor/bin/behat -dl
+php vendor/bin/behat -dl --lang=pt
+
 ```
 
 ## Ambiente necessário
