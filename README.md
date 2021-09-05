@@ -2,6 +2,8 @@
 
 > Projeto referente a [este](https://cursos.alura.com.br/course/php-introducao-bdd) curso.
 
+[**NÃO CONSEGUI SEGUIR O CURSO!**](https://cursos.alura.com.br/forum/curso-php-introducao-bdd/todos/1)
+
 ## Disclaimer
 
 Fiz a aula com o braço quebrado, portanto foi estudo mais passivo com copy/paste de código.
