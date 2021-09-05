@@ -39,11 +39,41 @@ Para executar este sistema é necessário ter instalado:
 - PHP (>= 7.3)
     - PDO SQLite
 
+```sh
+php -r "var_dump([
+    extension_loaded('pdo'),
+    extension_loaded('sqlite3'),
+    extension_loaded('pdo_sqlite')
+]);"
+```
+
+
+<!--
 ### Docker
 
 A imagem oficial do PHP (php:latest) já possui o ambiente necessário para executar este sistema, caso não deseje instalar
 as dependências (PHP e Composer) separadamente. Os exemplos a seguir partem do princípio que `Docker` será utilizado.
+-->
 
+## Iniciar o sistema
+
+1. Execute composer install para instalar todas as dependências necessárias
+
+2. Crie o banco de dados executando o comando php vendor/bin/doctrine orm:schema-tool:create
+
+3. Execute o seguinte comando para criar um usuário com e-mail “email@example.com” e senha “123456”
+
+```sh
+php vendor/bin/doctrine dbal:run-sql "INSERT INTO usuarios (email, senha) VALUES ('email@example.com', '\$argon2i\$v=19\$m=65536,t=4,p=1\$WHpBb1FzTDVpTmQubU55bA\$jtZiWSSbmw1Ru4tYEq1SzShrMu0ap2PjblRQRubNPgo');"
+```
+
+4. Inicialize o projeto em um servidor web:
+
+```sh
+php -S 0.0.0.0:8080 -t public
+```
+
+<!--
 ## Iniciar o sistema
 
 Antes de mais nada, é preciso instalar os componentes utilizados pelo sistema. Para isso, execute:
@@ -73,3 +103,4 @@ docker run -itv $(pwd):/app -w /app -u $(id -u):$(id -g) -p 8080:8080 php:latest
 ```
 
 Pronto! Basta acessar no seu navegador o endereço http://localhost:8080/ e começar a interagir com o sistema.
+-->
